@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+    }
+    .navbarLeft img {
+        height: 2rem;
+    }
+    .navbar {
+        grid-area: navbar;
+        display: grid;
+        grid-template-columns: 12fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .nav {
+        margin-left: 1rem;
+        color: hsl(236, 13%, 42%);
+        font-size: 1.2rem;
+    }
+    .container{
+        padding: 7vh 10vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1.35fr 9fr 3fr 2.5fr;
+        grid-template-areas: 'navbar navbar navbar'
+            'l1 l1 r12'
+            'l2 l2 r12'
+            '. . .';
+        /* border: 2px solid black; */
+        height: 110vh;
+        grid-gap: 1rem 1.4rem;
+    }
+    .l1 {
+        grid-area: l1;
+        background-image: url('image-web-3-desktop.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .l2 {
+        grid-area: l2;
+        display: grid;
+        grid-template-areas: 'l21 l22up l22up'
+            'l21 l22up l22up'
+            'l21 l22down l22down'
+        ;
+    }
+    .r12 {
+        padding: 1.4rem 1.4rem;
+        grid-area: r12;
+    }
+    .l21 {
+        font-weight: bold;
+        font-size: 3rem;
+        grid-area: l21;
+        padding-right: 1.5rem;
+        font-family: 'inter';
+    }
+    .l22up {
+        font-size: 1.4rem;
+        margin-top: 0.4rem;
+        grid-area: l22up;
+        color: hsl(236, 13%, 42%);
+    }
+    .l22down {
+        grid-area: l22down;
+    }
+    .l22down button {
+        background-color: hsl(5, 85%, 63%);
+        color: white;
+        padding: 0.8rem 2.4rem;
+        border: none;
+        font-size: 1rem;
+    }
+    .r12 {
+        color: hsl(36, 100%, 99%);
+        background-color: hsl(240, 100%, 5%);
+    }
+    .font {
+        font-family: 'inter';
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
+    #footer1 {
+        grid-template-areas: 'footer1Img footer1Text';
+    }
+    .footer1Img {
+        background-image: url('image-retro-pcs.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-area: footer1Img;
+    }
+    .footer1Text {
+        grid-area: footer1Text;
+    }
+    #footer2 {
+        grid-template-areas: 'footer2Img footer2Text';
+    }
+    .footer2Img {
+        background-image: url('image-top-laptops.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-area: footer2Img;
+    }
+    .footer2Text {
+        grid-area: footer2Text;
+    }
+    #footer3 {
+        grid-template-areas: 'footer3Img footer3Text';
+    }
+    .footer3Img {
+        background-image: url('image-gaming-growth.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-area: footer3Img;
+    }
+    .footer3Text {
+        grid-area: footer3Text;
+    }
+    .toptext {
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: hsl(233, 8%, 79%);
+    }
+
+    .midText {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 1rem;
+        font-family: 'inter';
+    }
+
+    .bottomText {
+        font-size: 1rem;
+        color: hsl(236, 13%, 42%);
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    .new {
+        color: hsl(35, 77%, 62%);
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .r12Up {
+        font-size: 1.5rem;
+    }
+
+    .r12Down {
+        color: hsl(233, 8%, 79%);
+        margin-top: 0.9rem;
+        font-size: 1.2rem;
+    }
+
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @media only screen and (min-width:280px) and (max-width:1200px){
+        .container {
+            grid-template-rows: 0.5fr 4fr 3.5fr 5.5fr 2.1fr 2.1fr 2.1fr;
+            grid-template-columns: none;
+            grid-template-areas: 'navbar'
+                'l1'
+                'l2'
+                'r12'
+                '.'
+                '.'
+                '.';
+            height: auto;
+            padding:1vh 1vw;
+        }
+
+        .l1 {
+            background-image: url('image-web-3-mobile.jpg');
+        }
+        @media only screen and (max-width:750px){
+        .nav{
+            display:none;
+        }
+        .navbarRight{
+            grid-column-end: 7;
+            grid-column-start:span 2;
+            background-image:url('icon-menu.jpg');
+            background-size: cover;
+        }
+    }
+     @media only screen and (min-width:520px){
+        .container{
+            grid-template-rows: 0.5fr 4fr 2.55fr 5.5fr 2.1fr 2.1fr 2.1fr;
+        }
+     }
+</style>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbarLeft">
+                <img src="logo.jpg">
+            </div>
+            <div class="nav">Home</div>
+            <div class="nav">New</div>
+            <div class="nav">Popular</div>
+            <div class="nav">Trending</div>
+            <div class="nav">Categories</div>
+            <div class="navbarRight"></div>
+        </div>
+        <div class="l1"></div>
+        <div class="l2">
+            <div class="l21">The bright future of Web 3.0?</div>
+            <div class="l22up">We dive into the next evolution of the web that claims to put the power of the platforms
+                back into the hands of the people. But is it really fulfilling its promise?</div>
+            <div class="l22down">
+                <button>Read More</button>
+            </div>
+        </div>
+        <div class="r12">
+            <div class="font new">New</div>
+            <div class="font r12Up">Hydrogen VS Electric Cars</div>
+            <div class="r12Down">Will hydrogen-fueled cars ever catch up to EVs?</div>
+            <hr>
+            <div class="font r12Up">The Downside of AI Artistry</div>
+            <div class="r12Down">What are the possible adverse effects of on-demand AI image generation?</div>
+            <hr>
+            <div class="font r12Up">Is VC Funding Drying Up</div>
+            <div class="r12Down">Private funding by VC firms is down 50% YOY. We take a look at what that means</div>
+        </div>
+        <div class="footer" id="footer1">
+            <div class="footer1Img"></div>
+            <div class="footer1Text">
+                <div class="toptext">01</div>
+                <div class="midText">Reviving Retro PCs</div>
+                <div class="bottomText">What happens when old PCs are given modern upgrades?</div>
+            </div>
+        </div>
+        <div class="footer" id="footer2">
+            <div class="footer2Img"></div>
+            <div class="footer2Text">
+                <div class="toptext">02</div>
+                <div class="midText">Top 10 laptops of 2022</div>
+                <div class="bottomText">Our best picks for various needs and budgets</div>
+            </div>
+        </div>
+        <div class="footer" id="footer3">
+            <div class="footer3Img"></div>
+            <div class="footer3Text">
+                <div class="toptext">03</div>
+                <div class="midText">The Growth of Gaming</div>
+                <div class="bottomText">How the pandemic has sparked fresh opportunities</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
