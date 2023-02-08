@@ -4,8 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Roboto:wght@700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <style>
     * {
@@ -25,9 +26,10 @@
     }
 
     .nav {
-        margin-left: 1.2rem;
+        margin-left: 1.6rem;
         color: hsl(240, 1%, 49%);
         font-size: 1.2rem;
+        font-family: 'Inter', sans-serif;
     }
 
     .container {
@@ -74,10 +76,11 @@
     }
 
     .l22up {
-        font-size: 1.4rem;
+        font-size: 1.15rem;
         margin-top: 0.4rem;
         grid-area: l22up;
         color: hsl(240, 1%, 49%);
+        font-family: 'Inter', sans-serif;
     }
 
     .l22down {
@@ -214,24 +217,27 @@
             background-image: url('image-web-3-mobile.jpg');
         }
 
-        @media only screen and (max-width:750px){
+        @media only screen and (max-width:750px) {
             .navbar {
-             grid-area: navbar;
-             display: grid;
-             grid-template-columns: 1fr 1fr;
-             grid-template-areas: 'navbarLeft navbarRight';
-        }
-            .nav{
+                grid-area: navbar;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 'navbarLeft navbarRight';
+            }
+
+            .nav {
                 display: none;
             }
-            .navbarLeft{
-                grid-area:navbarLeft;
+
+            .navbarLeft {
+                grid-area: navbarLeft;
             }
+
             .navbarRight {
                 background-image: url('icon-menu.jpg');
                 background-size: cover;
-                grid-area:navbarRight;
-                width:4.5rem;
+                grid-area: navbarRight;
+                width: 4.5rem;
                 height: 2rem;
                 justify-self: flex-end;
             }
@@ -304,4 +310,5 @@
         </div>
     </div>
 </body>
+
 </html>
