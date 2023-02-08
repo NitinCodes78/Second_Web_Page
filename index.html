@@ -13,20 +13,24 @@
         padding: 0;
         /* box-sizing: border-box; */
     }
+
     .navbarLeft img {
         height: 2rem;
     }
+
     .navbar {
         grid-area: navbar;
         display: grid;
         grid-template-columns: 12fr 1fr 1fr 1fr 1fr 1fr;
     }
+
     .nav {
-        margin-left: 1rem;
-        color: hsl(236, 13%, 42%);
+        margin-left: 1.2rem;
+        color: hsl(240, 1%, 49%);
         font-size: 1.2rem;
     }
-    .container{
+
+    .container {
         padding: 7vh 10vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -39,12 +43,14 @@
         height: 110vh;
         grid-gap: 1rem 1.4rem;
     }
+
     .l1 {
         grid-area: l1;
         background-image: url('image-web-3-desktop.jpg');
         background-size: cover;
         background-position: center;
     }
+
     .l2 {
         grid-area: l2;
         display: grid;
@@ -53,10 +59,12 @@
             'l21 l22down l22down'
         ;
     }
+
     .r12 {
         padding: 1.4rem 1.4rem;
         grid-area: r12;
     }
+
     .l21 {
         font-weight: bold;
         font-size: 3rem;
@@ -64,15 +72,18 @@
         padding-right: 1.5rem;
         font-family: 'inter';
     }
+
     .l22up {
         font-size: 1.4rem;
         margin-top: 0.4rem;
         grid-area: l22up;
-        color: hsl(236, 13%, 42%);
+        color: hsl(240, 1%, 49%);
     }
+
     .l22down {
         grid-area: l22down;
     }
+
     .l22down button {
         background-color: hsl(5, 85%, 63%);
         color: white;
@@ -80,13 +91,16 @@
         border: none;
         font-size: 1rem;
     }
+
     .r12 {
         color: hsl(36, 100%, 99%);
         background-color: hsl(240, 100%, 5%);
     }
+
     .font {
         font-family: 'inter';
     }
+
     .footer {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -94,42 +108,52 @@
         grid-gap: 1rem;
         margin-top: 2rem;
     }
+
     #footer1 {
         grid-template-areas: 'footer1Img footer1Text';
     }
+
     .footer1Img {
         background-image: url('image-retro-pcs.jpg');
         background-size: cover;
         background-position: center;
         grid-area: footer1Img;
     }
+
     .footer1Text {
         grid-area: footer1Text;
     }
+
     #footer2 {
         grid-template-areas: 'footer2Img footer2Text';
     }
+
     .footer2Img {
         background-image: url('image-top-laptops.jpg');
         background-size: cover;
         background-position: center;
         grid-area: footer2Img;
     }
+
     .footer2Text {
         grid-area: footer2Text;
     }
+
     #footer3 {
         grid-template-areas: 'footer3Img footer3Text';
     }
+
     .footer3Img {
         background-image: url('image-gaming-growth.jpg');
         background-size: cover;
         background-position: center;
         grid-area: footer3Img;
     }
+
     .footer3Text {
         grid-area: footer3Text;
     }
+
     .toptext {
         font-weight: bold;
         font-size: 1.8rem;
@@ -171,7 +195,7 @@
         margin-bottom: 2rem;
     }
 
-    @media only screen and (min-width:280px) and (max-width:1200px){
+    @media only screen and (min-width:100px) and (max-width:1200px) {
         .container {
             grid-template-rows: 0.5fr 4fr 3.5fr 5.5fr 2.1fr 2.1fr 2.1fr;
             grid-template-columns: none;
@@ -183,28 +207,41 @@
                 '.'
                 '.';
             height: auto;
-            padding:1vh 1vw;
+            padding: 1vh 1vw;
         }
 
         .l1 {
             background-image: url('image-web-3-mobile.jpg');
         }
+
         @media only screen and (max-width:750px){
-        .nav{
-            display:none;
+            .navbar {
+             grid-area: navbar;
+             display: grid;
+             grid-template-columns: 1fr 1fr;
+             grid-template-areas: 'navbarLeft navbarRight';
         }
-        .navbarRight{
-            grid-column-end: 7;
-            grid-column-start:span 2;
-            background-image:url('icon-menu.jpg');
-            background-size: cover;
+            .nav{
+                display: none;
+            }
+            .navbarLeft{
+                grid-area:navbarLeft;
+            }
+            .navbarRight {
+                background-image: url('icon-menu.jpg');
+                background-size: cover;
+                grid-area:navbarRight;
+                width:4.5rem;
+                height: 2rem;
+                justify-self: flex-end;
+            }
         }
-    }
-     @media only screen and (min-width:520px){
-        .container{
-            grid-template-rows: 0.5fr 4fr 2.55fr 5.5fr 2.1fr 2.1fr 2.1fr;
+
+        @media only screen and (min-width:520px) {
+            .container {
+                grid-template-rows: 0.5fr 4fr 2.55fr 5.5fr 2.1fr 2.1fr 2.1fr;
+            }
         }
-     }
 </style>
 
 <body>
@@ -224,7 +261,8 @@
         <div class="l2">
             <div class="l21">The bright future of Web 3.0?</div>
             <div class="l22up">We dive into the next evolution of the web that claims to put the power of the platforms
-                back into the hands of the people. But is it really fulfilling its promise?</div>
+                back into the hands of the people. But is it really fulfilling its promise?
+            </div>
             <div class="l22down">
                 <button>Read More</button>
             </div>
