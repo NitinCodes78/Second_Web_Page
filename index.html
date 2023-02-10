@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <style>
     * {
@@ -160,15 +160,15 @@
 
     .toptext {
         font-weight: bold;
-        font-size: 1.8rem;
+        font-size: 2rem;
         color: hsl(233, 8%, 79%);
     }
 
     .midText {
-        font-weight: bold;
-        font-size: 1rem;
+        font-weight: 1000;
+        font-size: 1.3rem;
         margin-top: 1rem;
-        font-family: 'inter';
+        font-family: "Inter", sans-serif;
     }
 
     .bottomText {
@@ -202,7 +202,7 @@
     }
     @media only screen and (max-width:1200px) {
         .container {
-            grid-template-rows: 0.5fr 4fr 3.5fr 5.5fr 2.1fr 2.1fr 2.1fr;
+            grid-template-rows: 0.3fr 2.5fr 2.5fr 3fr 0.5fr 0.5fr 0.5fr;
             grid-template-columns: none;
             grid-template-areas: 'navbar'
                 'l1'
@@ -214,11 +214,25 @@
             height: auto;
             padding: 1vh 1vw;
         }
-
+        .l2{
+            grid-template-rows:0.7fr 0.7fr 0.4fr;
+            grid-template-areas: 'l21'
+                                 'l22up'
+                                 'l22down';
+        }
+        .l21{
+            grid-area: l21;
+        }
+        .l22down{
+            margin-top: 1rem;
+            grid-area:l22down;
+        }
+        .l22up{
+            grid-area: l22up;
+        } 
         .l1 {
             background-image: url('image-web-3-mobile.jpg');
         }
-
         @media only screen and (max-width:750px) {
             .navbar {
                 grid-area: navbar;
@@ -245,11 +259,17 @@
             }
         }
 
-        @media only screen and (min-width:520px) {
+        @media only screen and (min-width:480px) {
             .container {
-                grid-template-rows: 0.5fr 4fr 2.55fr 5.5fr 2.1fr 2.1fr 2.1fr;
+                grid-template-rows:  0.2fr 1.7fr 0.7fr 1.6fr 0.5fr 0.5fr 0.5fr;
             }
         }
+        @media only screen and (min-width:610px) {
+            .container {
+                grid-template-rows:  0.2fr 1.7fr 0.7fr 1.6fr 0.75fr 0.75fr 0.75fr;
+            }
+        }
+
 </style>
 <body>
     <div class="container">
